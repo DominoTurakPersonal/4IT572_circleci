@@ -14,7 +14,7 @@ jobs:
       - persist_to_workspace:
           root:
           paths:
-            - .
+              - .
 
 
   deploy:
@@ -23,7 +23,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
 
 
 workflows:
